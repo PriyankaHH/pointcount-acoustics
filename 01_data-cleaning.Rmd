@@ -22,13 +22,15 @@ species_names <- read.csv("C:/Users/Priyanka H/OneDrive - University of Florida/
 pointcount_data <- read.csv ("C:/Users/Priyanka H/OneDrive - University of Florida/Chapter 1/pointcount-acoustics/data/filt_data.csv") %>%
   select (Site_ID, Site_type, Species, Number) %>%
   mutate (Site_ID = str_replace_all (Site_ID, "_", "")) %>%
-  mutate (Site_type = str_replace_all (Site_type, "AR", "Restored")) %>%
-  mutate (Site_type = str_replace_all (Site_type, "NR", "Unrestored")) %>%
-  mutate (Site_type = str_replace_all (Site_type, "BM", "Benchmark")) %>%
-  group_by (Species, Site_ID, Site_type) %>% 
+  mutate (Site_type = str_replace_all (Site_type, "Restored", "AR")) %>%
+  mutate (Site_type = str_replace_all (Site_type, "Unrestored", "NR")) %>%
+  mutate (Site_type = str_replace_all (Site_type, "Benchmark", "BM")) %>%
+  rename ("Treatment" = Site_type) %>%
+  add_column (Method = "pc") %>%
+  group_by (Species, Site_ID, Treatment, Method) %>% 
   summarise (Number=sum(Number)) %>% 
-  arrange(Site_type) %>%
-  pivot_wider (names_from = Species, values_from = Number, values_fill = list(Number=0))
+  arrange(Treatment) #%>%
+  #pivot_wider (names_from = Species, values_from = Number, values_fill = list(Number=0))
 ```
 
 #Preparing annotated acoustic data, with detection data (from 0 to n) for 43 sites, to use for an NMDS plot. Wide data.
@@ -40,13 +42,15 @@ acoustic_data <- read.csv ("C:/Users/Priyanka H/OneDrive - University of Florida
   replace(is.na(.), 0) %>%
   left_join(species_names) %>%
   select (-7, -4) %>%
-  mutate (Site_type = str_replace_all (Site_type, "AR", "Restored")) %>%
-  mutate (Site_type = str_replace_all (Site_type, "NR", "Unrestored")) %>%
-  mutate (Site_type = str_replace_all (Site_type, "BM", "Benchmark")) %>%
-  group_by (Species, Site_ID, Site_type) %>% 
-  summarise (vocalDetections=sum(vocalDetections)) %>% 
-  arrange(Site_type) %>%
-  pivot_wider (names_from = Species, values_from = vocalDetections, values_fill = list(vocalDetections=0))
+  mutate (Site_type = str_replace_all (Site_type, "Active", "AR")) %>%
+  mutate (Site_type = str_replace_all (Site_type, "Passive", "NR")) %>%
+  mutate (Site_type = str_replace_all (Site_type, "Benchmark", "BM")) %>%
+  rename ("Treatment" = Site_type, "Number" = vocalDetections) %>%
+  add_column (Method = "ac") %>%
+  group_by (Species, Site_ID, Treatment, Method) %>% 
+  summarise (Number=sum(Number)) %>% 
+  arrange(Treatment) #%>%
+  #pivot_wider (names_from = Species, values_from = vocalDetections, values_fill = list(vocalDetections=0))
 ```
 
 #Adding the two dataframes together, with 0s in the point count data for absent species

@@ -1764,11 +1764,42 @@ pre code {
 <p>#Loading packages</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSAodGlkeXZlcnNlKVxubGlicmFyeSAodmVnYW4pXG5cbmBgYCJ9 -->
-<pre class="r"><code>library (tidyverse)
-library (vegan)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSAodGlkeXZlcnNlKVxuYGBgIn0= -->
+<pre class="r"><code>library (tidyverse)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGhlIHBhY2thZ2VzIGBlbGxpcHNpc2AgKD49IDAuMy4yKSBhbmQgYHZjdHJzYCAoPj0gMC4zLjgpIGFyZSByZXF1aXJlZCBhcyBvZiBybGFuZyAxLjAuMC5cbiJ9 -->
+<pre><code>The packages `ellipsis` (&gt;= 0.3.2) and `vctrs` (&gt;= 0.3.8) are required as of rlang 1.0.0.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4xOiBZZXNcbjI6IE5vXG4ifQ== -->
+<pre><code>
+1: Yes
+2: No</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMlxuYGBgIn0= -->
+<pre class="r"><code>2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiU2V0IGBvcHRpb25zKHJsaWJfZG93bnN0cmVhbV9jaGVjayA9IEZBTFNFKWAgdG8gZGlzYWJsZSB0aGlzIHByb21wdC5XYXJuaW5nOiByZXBsYWNpbmcgcHJldmlvdXMgaW1wb3J0IOKAmGVsbGlwc2lzOjpjaGVja19kb3RzX3VubmFtZWTigJkgYnkg4oCYcmxhbmc6OmNoZWNrX2RvdHNfdW5uYW1lZOKAmSB3aGVuIGxvYWRpbmcg4oCYdGliYmxl4oCZV2FybmluZzogcmVwbGFjaW5nIHByZXZpb3VzIGltcG9ydCDigJhlbGxpcHNpczo6Y2hlY2tfZG90c191c2Vk4oCZIGJ5IOKAmHJsYW5nOjpjaGVja19kb3RzX3VzZWTigJkgd2hlbiBsb2FkaW5nIOKAmHRpYmJsZeKAmVdhcm5pbmc6IHJlcGxhY2luZyBwcmV2aW91cyBpbXBvcnQg4oCYZWxsaXBzaXM6OmNoZWNrX2RvdHNfZW1wdHnigJkgYnkg4oCYcmxhbmc6OmNoZWNrX2RvdHNfZW1wdHnigJkgd2hlbiBsb2FkaW5nIOKAmHRpYmJsZeKAmVJlZ2lzdGVyZWQgUzMgbWV0aG9kcyBvdmVyd3JpdHRlbiBieSAnZGJwbHlyJzpcbiAgbWV0aG9kICAgICAgICAgZnJvbVxuICBwcmludC50YmxfbGF6eSAgICAgXG4gIHByaW50LnRibF9zcWwgICAgICBcbi0tIEF0dGFjaGluZyBwYWNrYWdlcyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSB0aWR5dmVyc2UgMS4zLjAgLS1cbnYgZ2dwbG90MiAzLjMuMiAgICAgdiBwdXJyciAgIDAuMy40XG52IHRpYmJsZSAgMy4wLjEgICAgIHYgZHBseXIgICAxLjAuMFxudiB0aWR5ciAgIDEuMS4wICAgICB2IHN0cmluZ3IgMS40LjBcbnYgcmVhZHIgICAxLjMuMSAgICAgdiBmb3JjYXRzIDAuNS4wXG4tLSBDb25mbGljdHMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gdGlkeXZlcnNlX2NvbmZsaWN0cygpIC0tXG54IGRwbHlyOjpmaWx0ZXIoKSBtYXNrcyBzdGF0czo6ZmlsdGVyKClcbnggZHBseXI6OmxhZygpICAgIG1hc2tzIHN0YXRzOjpsYWcoKVxuIn0= -->
+<pre><code>Set `options(rlib_downstream_check = FALSE)` to disable this prompt.Warning: replacing previous import ‘ellipsis::check_dots_unnamed’ by ‘rlang::check_dots_unnamed’ when loading ‘tibble’Warning: replacing previous import ‘ellipsis::check_dots_used’ by ‘rlang::check_dots_used’ when loading ‘tibble’Warning: replacing previous import ‘ellipsis::check_dots_empty’ by ‘rlang::check_dots_empty’ when loading ‘tibble’Registered S3 methods overwritten by &#39;dbplyr&#39;:
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+-- Attaching packages -------------------------------------------------- tidyverse 1.3.0 --
+v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.1     v dplyr   1.0.0
+v tidyr   1.1.0     v stringr 1.4.0
+v readr   1.3.1     v forcats 0.5.0
+-- Conflicts ----------------------------------------------------- tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSAodmVnYW4pXG5gYGAifQ== -->
+<pre class="r"><code>library (vegan)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogcGFja2FnZSDigJh2ZWdhbuKAmSB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDQuMC41TG9hZGluZyByZXF1aXJlZCBwYWNrYWdlOiBwZXJtdXRlXG5Mb2FkaW5nIHJlcXVpcmVkIHBhY2thZ2U6IGxhdHRpY2VcblRoaXMgaXMgdmVnYW4gMi42LTJcbiJ9 -->
+<pre><code>Warning: package ‘vegan’ was built under R version 4.0.5Loading required package: permute
+Loading required package: lattice
+This is vegan 2.6-2</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Getting the common name for all 120 species, with habitat
@@ -1786,28 +1817,32 @@ understorey, aquatic, aerial)</p>
 sites arosss visits, to use for an NMDS plot. Wide data.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9pbnRjb3VudF9kYXRhIDwtIHJlYWQuY3N2IChcIkM6L1VzZXJzL1ByaXlhbmthIEgvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIEZsb3JpZGEvQ2hhcHRlciAxL3BvaW50Y291bnQtYWNvdXN0aWNzL2RhdGEvZmlsdF9kYXRhLmNzdlwiKSAlPiVcbiAgc2VsZWN0IChTaXRlX0lELCBTaXRlX3R5cGUsIFNwZWNpZXMsIE51bWJlcikgJT4lXG4gIG11dGF0ZSAoU2l0ZV9JRCA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV9JRCwgXCJfXCIsIFwiXCIpKSAlPiVcbiAgbXV0YXRlIChTaXRlX3R5cGUgPSBzdHJfcmVwbGFjZV9hbGwgKFNpdGVfdHlwZSwgXCJBUlwiLCBcIlJlc3RvcmVkXCIpKSAlPiVcbiAgbXV0YXRlIChTaXRlX3R5cGUgPSBzdHJfcmVwbGFjZV9hbGwgKFNpdGVfdHlwZSwgXCJOUlwiLCBcIlVucmVzdG9yZWRcIikpICU+JVxuICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCBcIkJNXCIsIFwiQmVuY2htYXJrXCIpKSAlPiVcbiAgZ3JvdXBfYnkgKFNwZWNpZXMsIFNpdGVfSUQsIFNpdGVfdHlwZSkgJT4lIFxuICBzdW1tYXJpc2UgKE51bWJlcj1zdW0oTnVtYmVyKSkgJT4lIFxuICBhcnJhbmdlKFNpdGVfdHlwZSkgJT4lXG4gIHBpdm90X3dpZGVyIChuYW1lc19mcm9tID0gU3BlY2llcywgdmFsdWVzX2Zyb20gPSBOdW1iZXIsIHZhbHVlc19maWxsID0gbGlzdChOdW1iZXI9MCkpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9pbnRjb3VudF9kYXRhIDwtIHJlYWQuY3N2IChcIkM6L1VzZXJzL1ByaXlhbmthIEgvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIEZsb3JpZGEvQ2hhcHRlciAxL3BvaW50Y291bnQtYWNvdXN0aWNzL2RhdGEvZmlsdF9kYXRhLmNzdlwiKSAlPiVcbiAgc2VsZWN0IChTaXRlX0lELCBTaXRlX3R5cGUsIFNwZWNpZXMsIE51bWJlcikgJT4lXG4gIG11dGF0ZSAoU2l0ZV9JRCA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV9JRCwgXCJfXCIsIFwiXCIpKSAlPiVcbiAgbXV0YXRlIChTaXRlX3R5cGUgPSBzdHJfcmVwbGFjZV9hbGwgKFNpdGVfdHlwZSwgXCJSZXN0b3JlZFwiLCBcIkFSXCIpKSAlPiVcbiAgbXV0YXRlIChTaXRlX3R5cGUgPSBzdHJfcmVwbGFjZV9hbGwgKFNpdGVfdHlwZSwgXCJVbnJlc3RvcmVkXCIsIFwiTlJcIikpICU+JVxuICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCBcIkJlbmNobWFya1wiLCBcIkJNXCIpKSAlPiVcbiAgcmVuYW1lIChcIlRyZWF0bWVudFwiID0gU2l0ZV90eXBlKSAlPiVcbiAgYWRkX2NvbHVtbiAoTWV0aG9kID0gXCJwY1wiKSAlPiVcbiAgZ3JvdXBfYnkgKFNwZWNpZXMsIFNpdGVfSUQsIFRyZWF0bWVudCwgTWV0aG9kKSAlPiUgXG4gIHN1bW1hcmlzZSAoTnVtYmVyPXN1bShOdW1iZXIpKSAlPiUgXG4gIGFycmFuZ2UoVHJlYXRtZW50KSAjJT4lXG5gYGAifQ== -->
 <pre class="r"><code>pointcount_data &lt;- read.csv (&quot;C:/Users/Priyanka H/OneDrive - University of Florida/Chapter 1/pointcount-acoustics/data/filt_data.csv&quot;) %&gt;%
   select (Site_ID, Site_type, Species, Number) %&gt;%
   mutate (Site_ID = str_replace_all (Site_ID, &quot;_&quot;, &quot;&quot;)) %&gt;%
-  mutate (Site_type = str_replace_all (Site_type, &quot;AR&quot;, &quot;Restored&quot;)) %&gt;%
-  mutate (Site_type = str_replace_all (Site_type, &quot;NR&quot;, &quot;Unrestored&quot;)) %&gt;%
-  mutate (Site_type = str_replace_all (Site_type, &quot;BM&quot;, &quot;Benchmark&quot;)) %&gt;%
-  group_by (Species, Site_ID, Site_type) %&gt;% 
+  mutate (Site_type = str_replace_all (Site_type, &quot;Restored&quot;, &quot;AR&quot;)) %&gt;%
+  mutate (Site_type = str_replace_all (Site_type, &quot;Unrestored&quot;, &quot;NR&quot;)) %&gt;%
+  mutate (Site_type = str_replace_all (Site_type, &quot;Benchmark&quot;, &quot;BM&quot;)) %&gt;%
+  rename (&quot;Treatment&quot; = Site_type) %&gt;%
+  add_column (Method = &quot;pc&quot;) %&gt;%
+  group_by (Species, Site_ID, Treatment, Method) %&gt;% 
   summarise (Number=sum(Number)) %&gt;% 
-  arrange(Site_type) %&gt;%
-  pivot_wider (names_from = Species, values_from = Number, values_fill = list(Number=0))</code></pre>
+  arrange(Treatment) #%&gt;%</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCByZWdyb3VwaW5nIG91dHB1dCBieSAnU3BlY2llcycsICdTaXRlX0lEJyAob3ZlcnJpZGUgd2l0aCBgLmdyb3Vwc2AgYXJndW1lbnQpXG4ifQ== -->
-<pre><code>`summarise()` regrouping output by &#39;Species&#39;, &#39;Site_ID&#39; (override with `.groups` argument)</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiYHN1bW1hcmlzZSgpYCByZWdyb3VwaW5nIG91dHB1dCBieSAnU3BlY2llcycsICdTaXRlX0lEJywgJ1RyZWF0bWVudCcgKG92ZXJyaWRlIHdpdGggYC5ncm91cHNgIGFyZ3VtZW50KVxuIn0= -->
+<pre><code>`summarise()` regrouping output by &#39;Species&#39;, &#39;Site_ID&#39;, &#39;Treatment&#39; (override with `.groups` argument)</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICAjcGl2b3Rfd2lkZXIgKG5hbWVzX2Zyb20gPSBTcGVjaWVzLCB2YWx1ZXNfZnJvbSA9IE51bWJlciwgdmFsdWVzX2ZpbGwgPSBsaXN0KE51bWJlcj0wKSlcbmBgYCJ9 -->
+<pre class="r"><code>  #pivot_wider (names_from = Species, values_from = Number, values_fill = list(Number=0))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Preparing annotated acoustic data, with detection data (from 0 to n)
 for 43 sites, to use for an NMDS plot. Wide data.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWNvdXN0aWNfZGF0YSA8LSByZWFkLmNzdiAoXCJDOi9Vc2Vycy9Qcml5YW5rYSBIL09uZURyaXZlIC0gVW5pdmVyc2l0eSBvZiBGbG9yaWRhL0NvdXJzZXdvcmsvTXVsdGl2YXJpYXRlIFN0YXRzL0RhdGEvdm9jYWwtZGV0ZWN0aW9ucy1kYXRhLmNzdlwiKSAlPiVcbiAgc2VsZWN0IChEYXRlLCBTaXRlLCBSZXN0b3JhdGlvbi50eXBlLCA3OjEyOCkgJT4lXG4gIHBpdm90X2xvbmdlcihjb2xzPUlQOkhTV1AsIG5hbWVzX3RvID0gXCJTcGVjaWVzXCIsIHZhbHVlc190byA9IFwidm9jYWxEZXRlY3Rpb25zXCIpICU+JVxuICByZW5hbWUgKFwiU2l0ZV9JRFwiID0gU2l0ZSwgXCJTaXRlX3R5cGVcIiA9IFJlc3RvcmF0aW9uLnR5cGUsIFwic3BlY2llc19hbm5vdGF0aW9uX2NvZGVzXCIgPSBTcGVjaWVzKSAlPiVcbiAgcmVwbGFjZShpcy5uYSguKSwgMCkgJT4lXG4gIGxlZnRfam9pbihzcGVjaWVzX25hbWVzKSAlPiVcbiAgc2VsZWN0ICgtNywgLTQpICU+JVxuICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCBcIkFSXCIsIFwiUmVzdG9yZWRcIikpICU+JVxuICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCBcIk5SXCIsIFwiVW5yZXN0b3JlZFwiKSkgJT4lXG4gIG11dGF0ZSAoU2l0ZV90eXBlID0gc3RyX3JlcGxhY2VfYWxsIChTaXRlX3R5cGUsIFwiQk1cIiwgXCJCZW5jaG1hcmtcIikpICU+JVxuICBncm91cF9ieSAoU3BlY2llcywgU2l0ZV9JRCwgU2l0ZV90eXBlKSAlPiUgXG4gIHN1bW1hcmlzZSAodm9jYWxEZXRlY3Rpb25zPXN1bSh2b2NhbERldGVjdGlvbnMpKSAlPiUgXG4gIGFycmFuZ2UoU2l0ZV90eXBlKSAlPiVcbiAgcGl2b3Rfd2lkZXIgKG5hbWVzX2Zyb20gPSBTcGVjaWVzLCB2YWx1ZXNfZnJvbSA9IHZvY2FsRGV0ZWN0aW9ucywgdmFsdWVzX2ZpbGwgPSBsaXN0KHZvY2FsRGV0ZWN0aW9ucz0wKSlcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWNvdXN0aWNfZGF0YSA8LSByZWFkLmNzdiAoXCJDOi9Vc2Vycy9Qcml5YW5rYSBIL09uZURyaXZlIC0gVW5pdmVyc2l0eSBvZiBGbG9yaWRhL0NvdXJzZXdvcmsvTXVsdGl2YXJpYXRlIFN0YXRzL0RhdGEvdm9jYWwtZGV0ZWN0aW9ucy1kYXRhLmNzdlwiKSAlPiVcbiAgc2VsZWN0IChEYXRlLCBTaXRlLCBSZXN0b3JhdGlvbi50eXBlLCA3OjEyOCkgJT4lXG4gIHBpdm90X2xvbmdlcihjb2xzPUlQOkhTV1AsIG5hbWVzX3RvID0gXCJTcGVjaWVzXCIsIHZhbHVlc190byA9IFwidm9jYWxEZXRlY3Rpb25zXCIpICU+JVxuICByZW5hbWUgKFwiU2l0ZV9JRFwiID0gU2l0ZSwgXCJTaXRlX3R5cGVcIiA9IFJlc3RvcmF0aW9uLnR5cGUsIFwic3BlY2llc19hbm5vdGF0aW9uX2NvZGVzXCIgPSBTcGVjaWVzKSAlPiVcbiAgcmVwbGFjZShpcy5uYSguKSwgMCkgJT4lXG4gIGxlZnRfam9pbihzcGVjaWVzX25hbWVzKSAlPiVcbiAgc2VsZWN0ICgtNywgLTQpICU+JVxuICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCBcIkFjdGl2ZVwiLCBcIkFSXCIpKSAlPiVcbiAgbXV0YXRlIChTaXRlX3R5cGUgPSBzdHJfcmVwbGFjZV9hbGwgKFNpdGVfdHlwZSwgXCJQYXNzaXZlXCIsIFwiTlJcIikpICU+JVxuICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCBcIkJlbmNobWFya1wiLCBcIkJNXCIpKSAlPiVcbiAgcmVuYW1lIChcIlRyZWF0bWVudFwiID0gU2l0ZV90eXBlLCBcIk51bWJlclwiID0gdm9jYWxEZXRlY3Rpb25zKSAlPiVcbiAgYWRkX2NvbHVtbiAoTWV0aG9kID0gXCJhY1wiKSAlPiVcbiAgZ3JvdXBfYnkgKFNwZWNpZXMsIFNpdGVfSUQsIFRyZWF0bWVudCwgTWV0aG9kKSAlPiUgXG4gIHN1bW1hcmlzZSAoTnVtYmVyPXN1bShOdW1iZXIpKSAlPiUgXG4gIGFycmFuZ2UoVHJlYXRtZW50KSAjJT4lXG5gYGAifQ== -->
 <pre class="r"><code>acoustic_data &lt;- read.csv (&quot;C:/Users/Priyanka H/OneDrive - University of Florida/Coursework/Multivariate Stats/Data/vocal-detections-data.csv&quot;) %&gt;%
   select (Date, Site, Restoration.type, 7:128) %&gt;%
   pivot_longer(cols=IP:HSWP, names_to = &quot;Species&quot;, values_to = &quot;vocalDetections&quot;) %&gt;%
@@ -1815,17 +1850,21 @@ for 43 sites, to use for an NMDS plot. Wide data.</p>
   replace(is.na(.), 0) %&gt;%
   left_join(species_names) %&gt;%
   select (-7, -4) %&gt;%
-  mutate (Site_type = str_replace_all (Site_type, &quot;AR&quot;, &quot;Restored&quot;)) %&gt;%
-  mutate (Site_type = str_replace_all (Site_type, &quot;NR&quot;, &quot;Unrestored&quot;)) %&gt;%
-  mutate (Site_type = str_replace_all (Site_type, &quot;BM&quot;, &quot;Benchmark&quot;)) %&gt;%
-  group_by (Species, Site_ID, Site_type) %&gt;% 
-  summarise (vocalDetections=sum(vocalDetections)) %&gt;% 
-  arrange(Site_type) %&gt;%
-  pivot_wider (names_from = Species, values_from = vocalDetections, values_fill = list(vocalDetections=0))</code></pre>
+  mutate (Site_type = str_replace_all (Site_type, &quot;Active&quot;, &quot;AR&quot;)) %&gt;%
+  mutate (Site_type = str_replace_all (Site_type, &quot;Passive&quot;, &quot;NR&quot;)) %&gt;%
+  mutate (Site_type = str_replace_all (Site_type, &quot;Benchmark&quot;, &quot;BM&quot;)) %&gt;%
+  rename (&quot;Treatment&quot; = Site_type, &quot;Number&quot; = vocalDetections) %&gt;%
+  add_column (Method = &quot;ac&quot;) %&gt;%
+  group_by (Species, Site_ID, Treatment, Method) %&gt;% 
+  summarise (Number=sum(Number)) %&gt;% 
+  arrange(Treatment) #%&gt;%</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSm9pbmluZywgYnkgPSBcInNwZWNpZXNfYW5ub3RhdGlvbl9jb2Rlc1wiYHN1bW1hcmlzZSgpYCByZWdyb3VwaW5nIG91dHB1dCBieSAnU3BlY2llcycsICdTaXRlX0lEJyAob3ZlcnJpZGUgd2l0aCBgLmdyb3Vwc2AgYXJndW1lbnQpXG4ifQ== -->
-<pre><code>Joining, by = &quot;species_annotation_codes&quot;`summarise()` regrouping output by &#39;Species&#39;, &#39;Site_ID&#39; (override with `.groups` argument)</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSm9pbmluZywgYnkgPSBcInNwZWNpZXNfYW5ub3RhdGlvbl9jb2Rlc1wiYHN1bW1hcmlzZSgpYCByZWdyb3VwaW5nIG91dHB1dCBieSAnU3BlY2llcycsICdTaXRlX0lEJywgJ1RyZWF0bWVudCcgKG92ZXJyaWRlIHdpdGggYC5ncm91cHNgIGFyZ3VtZW50KVxuIn0= -->
+<pre><code>Joining, by = &quot;species_annotation_codes&quot;`summarise()` regrouping output by &#39;Species&#39;, &#39;Site_ID&#39;, &#39;Treatment&#39; (override with `.groups` argument)</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICAjcGl2b3Rfd2lkZXIgKG5hbWVzX2Zyb20gPSBTcGVjaWVzLCB2YWx1ZXNfZnJvbSA9IHZvY2FsRGV0ZWN0aW9ucywgdmFsdWVzX2ZpbGwgPSBsaXN0KHZvY2FsRGV0ZWN0aW9ucz0wKSlcbmBgYCJ9 -->
+<pre class="r"><code>  #pivot_wider (names_from = Species, values_from = vocalDetections, values_fill = list(vocalDetections=0))</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>#Adding the two dataframes together, with 0s in the point count data
@@ -1844,7 +1883,7 @@ acoustic_data &lt;- as.matrix (acoustic_data [, 3:ncol(acoustic_data)])
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQojTG9hZGluZyBwYWNrYWdlcw0KDQpgYGB7cn0NCmxpYnJhcnkgKHRpZHl2ZXJzZSkNCmxpYnJhcnkgKHZlZ2FuKQ0KDQpgYGANCg0KI0dldHRpbmcgdGhlIGNvbW1vbiBuYW1lIGZvciBhbGwgMTIwIHNwZWNpZXMsIHdpdGggaGFiaXRhdCAocmFpbmZvcmVzdC9vcGVuLWNvdW50cnkpIGFuZCBoYWJpdCAoY2Fub3B5LCBtaWQtc3RvcmV5LCBncm91bmQsIHVuZGVyc3RvcmV5LCBhcXVhdGljLCBhZXJpYWwpDQpgYGB7cn0NCnNwZWNpZXNfbmFtZXMgPC0gcmVhZC5jc3YoIkM6L1VzZXJzL1ByaXlhbmthIEgvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIEZsb3JpZGEvQ2hhcHRlciAxL3BvaW50Y291bnQtYWNvdXN0aWNzL2RhdGEvc3BlY2llcy10cmFpdC1kYXQuY3N2IikgJT4lDQogIHJlbmFtZSAoIlNwZWNpZXMiID0gY29tbW9uX25hbWUpDQpgYGANCg0KI1ByZXBhcmluZyBwb2ludC1jb3VudCBkYXRhLCB3aXRoIGFidW5kYW5jZSBkYXRhICgwIHRvIG4pIGZvciA2OSBzaXRlcyBhcm9zc3MgdmlzaXRzLCB0byB1c2UgZm9yIGFuIE5NRFMgcGxvdC4gV2lkZSBkYXRhLg0KYGBge3J9DQpwb2ludGNvdW50X2RhdGEgPC0gcmVhZC5jc3YgKCJDOi9Vc2Vycy9Qcml5YW5rYSBIL09uZURyaXZlIC0gVW5pdmVyc2l0eSBvZiBGbG9yaWRhL0NoYXB0ZXIgMS9wb2ludGNvdW50LWFjb3VzdGljcy9kYXRhL2ZpbHRfZGF0YS5jc3YiKSAlPiUNCiAgc2VsZWN0IChTaXRlX0lELCBTaXRlX3R5cGUsIFNwZWNpZXMsIE51bWJlcikgJT4lDQogIG11dGF0ZSAoU2l0ZV9JRCA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV9JRCwgIl8iLCAiIikpICU+JQ0KICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCAiQVIiLCAiUmVzdG9yZWQiKSkgJT4lDQogIG11dGF0ZSAoU2l0ZV90eXBlID0gc3RyX3JlcGxhY2VfYWxsIChTaXRlX3R5cGUsICJOUiIsICJVbnJlc3RvcmVkIikpICU+JQ0KICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCAiQk0iLCAiQmVuY2htYXJrIikpICU+JQ0KICBncm91cF9ieSAoU3BlY2llcywgU2l0ZV9JRCwgU2l0ZV90eXBlKSAlPiUgDQogIHN1bW1hcmlzZSAoTnVtYmVyPXN1bShOdW1iZXIpKSAlPiUgDQogIGFycmFuZ2UoU2l0ZV90eXBlKSAlPiUNCiAgcGl2b3Rfd2lkZXIgKG5hbWVzX2Zyb20gPSBTcGVjaWVzLCB2YWx1ZXNfZnJvbSA9IE51bWJlciwgdmFsdWVzX2ZpbGwgPSBsaXN0KE51bWJlcj0wKSkNCmBgYA0KDQojUHJlcGFyaW5nIGFubm90YXRlZCBhY291c3RpYyBkYXRhLCB3aXRoIGRldGVjdGlvbiBkYXRhIChmcm9tIDAgdG8gbikgZm9yIDQzIHNpdGVzLCB0byB1c2UgZm9yIGFuIE5NRFMgcGxvdC4gV2lkZSBkYXRhLg0KYGBge3J9DQphY291c3RpY19kYXRhIDwtIHJlYWQuY3N2ICgiQzovVXNlcnMvUHJpeWFua2EgSC9PbmVEcml2ZSAtIFVuaXZlcnNpdHkgb2YgRmxvcmlkYS9Db3Vyc2V3b3JrL011bHRpdmFyaWF0ZSBTdGF0cy9EYXRhL3ZvY2FsLWRldGVjdGlvbnMtZGF0YS5jc3YiKSAlPiUNCiAgc2VsZWN0IChEYXRlLCBTaXRlLCBSZXN0b3JhdGlvbi50eXBlLCA3OjEyOCkgJT4lDQogIHBpdm90X2xvbmdlcihjb2xzPUlQOkhTV1AsIG5hbWVzX3RvID0gIlNwZWNpZXMiLCB2YWx1ZXNfdG8gPSAidm9jYWxEZXRlY3Rpb25zIikgJT4lDQogIHJlbmFtZSAoIlNpdGVfSUQiID0gU2l0ZSwgIlNpdGVfdHlwZSIgPSBSZXN0b3JhdGlvbi50eXBlLCAic3BlY2llc19hbm5vdGF0aW9uX2NvZGVzIiA9IFNwZWNpZXMpICU+JQ0KICByZXBsYWNlKGlzLm5hKC4pLCAwKSAlPiUNCiAgbGVmdF9qb2luKHNwZWNpZXNfbmFtZXMpICU+JQ0KICBzZWxlY3QgKC03LCAtNCkgJT4lDQogIG11dGF0ZSAoU2l0ZV90eXBlID0gc3RyX3JlcGxhY2VfYWxsIChTaXRlX3R5cGUsICJBUiIsICJSZXN0b3JlZCIpKSAlPiUNCiAgbXV0YXRlIChTaXRlX3R5cGUgPSBzdHJfcmVwbGFjZV9hbGwgKFNpdGVfdHlwZSwgIk5SIiwgIlVucmVzdG9yZWQiKSkgJT4lDQogIG11dGF0ZSAoU2l0ZV90eXBlID0gc3RyX3JlcGxhY2VfYWxsIChTaXRlX3R5cGUsICJCTSIsICJCZW5jaG1hcmsiKSkgJT4lDQogIGdyb3VwX2J5IChTcGVjaWVzLCBTaXRlX0lELCBTaXRlX3R5cGUpICU+JSANCiAgc3VtbWFyaXNlICh2b2NhbERldGVjdGlvbnM9c3VtKHZvY2FsRGV0ZWN0aW9ucykpICU+JSANCiAgYXJyYW5nZShTaXRlX3R5cGUpICU+JQ0KICBwaXZvdF93aWRlciAobmFtZXNfZnJvbSA9IFNwZWNpZXMsIHZhbHVlc19mcm9tID0gdm9jYWxEZXRlY3Rpb25zLCB2YWx1ZXNfZmlsbCA9IGxpc3Qodm9jYWxEZXRlY3Rpb25zPTApKQ0KYGBgDQoNCiNBZGRpbmcgdGhlIHR3byBkYXRhZnJhbWVzIHRvZ2V0aGVyLCB3aXRoIDBzIGluIHRoZSBwb2ludCBjb3VudCBkYXRhIGZvciBhYnNlbnQgc3BlY2llcw0KYGBge3J9DQoNCmBgYA0KDQoNCiNDb252ZXJ0aW5nIHRoZSBkYXRhZnJhbWVzIHRvIG1hdHJpY2VzIHRvIG1ha2UgYW4gTk1EUyBwbG90DQpgYGB7cn0NCnBvaW50Y291bnRfZGF0YSA8LSBhcy5tYXRyaXggKHBvaW50Y291bnRfZGF0YSBbLCAzOm5jb2wocG9pbnRjb3VudF9kYXRhKV0pDQphY291c3RpY19kYXRhIDwtIGFzLm1hdHJpeCAoYWNvdXN0aWNfZGF0YSBbLCAzOm5jb2woYWNvdXN0aWNfZGF0YSldKQ0KDQpgYGANCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQojTG9hZGluZyBwYWNrYWdlcw0KDQpgYGB7cn0NCmxpYnJhcnkgKHRpZHl2ZXJzZSkNCmxpYnJhcnkgKHZlZ2FuKQ0KDQpgYGANCg0KI0dldHRpbmcgdGhlIGNvbW1vbiBuYW1lIGZvciBhbGwgMTIwIHNwZWNpZXMsIHdpdGggaGFiaXRhdCAocmFpbmZvcmVzdC9vcGVuLWNvdW50cnkpIGFuZCBoYWJpdCAoY2Fub3B5LCBtaWQtc3RvcmV5LCBncm91bmQsIHVuZGVyc3RvcmV5LCBhcXVhdGljLCBhZXJpYWwpDQpgYGB7cn0NCnNwZWNpZXNfbmFtZXMgPC0gcmVhZC5jc3YoIkM6L1VzZXJzL1ByaXlhbmthIEgvT25lRHJpdmUgLSBVbml2ZXJzaXR5IG9mIEZsb3JpZGEvQ2hhcHRlciAxL3BvaW50Y291bnQtYWNvdXN0aWNzL2RhdGEvc3BlY2llcy10cmFpdC1kYXQuY3N2IikgJT4lDQogIHJlbmFtZSAoIlNwZWNpZXMiID0gY29tbW9uX25hbWUpDQpgYGANCg0KI1ByZXBhcmluZyBwb2ludC1jb3VudCBkYXRhLCB3aXRoIGFidW5kYW5jZSBkYXRhICgwIHRvIG4pIGZvciA2OSBzaXRlcyBhcm9zc3MgdmlzaXRzLCB0byB1c2UgZm9yIGFuIE5NRFMgcGxvdC4gV2lkZSBkYXRhLg0KYGBge3J9DQpwb2ludGNvdW50X2RhdGEgPC0gcmVhZC5jc3YgKCJDOi9Vc2Vycy9Qcml5YW5rYSBIL09uZURyaXZlIC0gVW5pdmVyc2l0eSBvZiBGbG9yaWRhL0NoYXB0ZXIgMS9wb2ludGNvdW50LWFjb3VzdGljcy9kYXRhL2ZpbHRfZGF0YS5jc3YiKSAlPiUNCiAgc2VsZWN0IChTaXRlX0lELCBTaXRlX3R5cGUsIFNwZWNpZXMsIE51bWJlcikgJT4lDQogIG11dGF0ZSAoU2l0ZV9JRCA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV9JRCwgIl8iLCAiIikpICU+JQ0KICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCAiUmVzdG9yZWQiLCAiQVIiKSkgJT4lDQogIG11dGF0ZSAoU2l0ZV90eXBlID0gc3RyX3JlcGxhY2VfYWxsIChTaXRlX3R5cGUsICJVbnJlc3RvcmVkIiwgIk5SIikpICU+JQ0KICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCAiQmVuY2htYXJrIiwgIkJNIikpICU+JQ0KICByZW5hbWUgKCJUcmVhdG1lbnQiID0gU2l0ZV90eXBlKSAlPiUNCiAgYWRkX2NvbHVtbiAoTWV0aG9kID0gInBjIikgJT4lDQogIGdyb3VwX2J5IChTcGVjaWVzLCBTaXRlX0lELCBUcmVhdG1lbnQsIE1ldGhvZCkgJT4lIA0KICBzdW1tYXJpc2UgKE51bWJlcj1zdW0oTnVtYmVyKSkgJT4lIA0KICBhcnJhbmdlKFRyZWF0bWVudCkgIyU+JQ0KICAjcGl2b3Rfd2lkZXIgKG5hbWVzX2Zyb20gPSBTcGVjaWVzLCB2YWx1ZXNfZnJvbSA9IE51bWJlciwgdmFsdWVzX2ZpbGwgPSBsaXN0KE51bWJlcj0wKSkNCmBgYA0KDQojUHJlcGFyaW5nIGFubm90YXRlZCBhY291c3RpYyBkYXRhLCB3aXRoIGRldGVjdGlvbiBkYXRhIChmcm9tIDAgdG8gbikgZm9yIDQzIHNpdGVzLCB0byB1c2UgZm9yIGFuIE5NRFMgcGxvdC4gV2lkZSBkYXRhLg0KYGBge3J9DQphY291c3RpY19kYXRhIDwtIHJlYWQuY3N2ICgiQzovVXNlcnMvUHJpeWFua2EgSC9PbmVEcml2ZSAtIFVuaXZlcnNpdHkgb2YgRmxvcmlkYS9Db3Vyc2V3b3JrL011bHRpdmFyaWF0ZSBTdGF0cy9EYXRhL3ZvY2FsLWRldGVjdGlvbnMtZGF0YS5jc3YiKSAlPiUNCiAgc2VsZWN0IChEYXRlLCBTaXRlLCBSZXN0b3JhdGlvbi50eXBlLCA3OjEyOCkgJT4lDQogIHBpdm90X2xvbmdlcihjb2xzPUlQOkhTV1AsIG5hbWVzX3RvID0gIlNwZWNpZXMiLCB2YWx1ZXNfdG8gPSAidm9jYWxEZXRlY3Rpb25zIikgJT4lDQogIHJlbmFtZSAoIlNpdGVfSUQiID0gU2l0ZSwgIlNpdGVfdHlwZSIgPSBSZXN0b3JhdGlvbi50eXBlLCAic3BlY2llc19hbm5vdGF0aW9uX2NvZGVzIiA9IFNwZWNpZXMpICU+JQ0KICByZXBsYWNlKGlzLm5hKC4pLCAwKSAlPiUNCiAgbGVmdF9qb2luKHNwZWNpZXNfbmFtZXMpICU+JQ0KICBzZWxlY3QgKC03LCAtNCkgJT4lDQogIG11dGF0ZSAoU2l0ZV90eXBlID0gc3RyX3JlcGxhY2VfYWxsIChTaXRlX3R5cGUsICJBY3RpdmUiLCAiQVIiKSkgJT4lDQogIG11dGF0ZSAoU2l0ZV90eXBlID0gc3RyX3JlcGxhY2VfYWxsIChTaXRlX3R5cGUsICJQYXNzaXZlIiwgIk5SIikpICU+JQ0KICBtdXRhdGUgKFNpdGVfdHlwZSA9IHN0cl9yZXBsYWNlX2FsbCAoU2l0ZV90eXBlLCAiQmVuY2htYXJrIiwgIkJNIikpICU+JQ0KICByZW5hbWUgKCJUcmVhdG1lbnQiID0gU2l0ZV90eXBlLCAiTnVtYmVyIiA9IHZvY2FsRGV0ZWN0aW9ucykgJT4lDQogIGFkZF9jb2x1bW4gKE1ldGhvZCA9ICJhYyIpICU+JQ0KICBncm91cF9ieSAoU3BlY2llcywgU2l0ZV9JRCwgVHJlYXRtZW50LCBNZXRob2QpICU+JSANCiAgc3VtbWFyaXNlIChOdW1iZXI9c3VtKE51bWJlcikpICU+JSANCiAgYXJyYW5nZShUcmVhdG1lbnQpICMlPiUNCiAgI3Bpdm90X3dpZGVyIChuYW1lc19mcm9tID0gU3BlY2llcywgdmFsdWVzX2Zyb20gPSB2b2NhbERldGVjdGlvbnMsIHZhbHVlc19maWxsID0gbGlzdCh2b2NhbERldGVjdGlvbnM9MCkpDQpgYGANCg0KI0FkZGluZyB0aGUgdHdvIGRhdGFmcmFtZXMgdG9nZXRoZXIsIHdpdGggMHMgaW4gdGhlIHBvaW50IGNvdW50IGRhdGEgZm9yIGFic2VudCBzcGVjaWVzDQpgYGB7cn0NCg0KYGBgDQoNCg0KI0NvbnZlcnRpbmcgdGhlIGRhdGFmcmFtZXMgdG8gbWF0cmljZXMgdG8gbWFrZSBhbiBOTURTIHBsb3QNCmBgYHtyfQ0KcG9pbnRjb3VudF9kYXRhIDwtIGFzLm1hdHJpeCAocG9pbnRjb3VudF9kYXRhIFssIDM6bmNvbChwb2ludGNvdW50X2RhdGEpXSkNCmFjb3VzdGljX2RhdGEgPC0gYXMubWF0cml4IChhY291c3RpY19kYXRhIFssIDM6bmNvbChhY291c3RpY19kYXRhKV0pDQoNCmBgYA0K</div>
 
 
 
