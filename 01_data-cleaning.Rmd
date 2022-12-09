@@ -25,13 +25,19 @@ sites <- read.csv("data/list-of-sites-acoustic-study.csv") %>%
 
 # read point count data
 pointcount_data <- read.csv("data/filt_data.csv") %>%
-  select (Site_ID, Site_type, Species, Date,Number) %>%
+  select (Site_ID, Site_type, Species, Date, Number) %>%
   mutate (Site_ID = str_replace_all (Site_ID, "_", "")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Restored", "AR")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Unrestored", "NR")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Benchmark", "BM")) %>%
   rename ("Treatment" = Site_type) %>%
-  add_column (Method = "pc") 
+  add_column (Method = "pc") %>%
+  mutate(forRichness = case_when(Number>0 ~ 1,Number==0 ~ 0)) %>%
+  select(Site_ID, Species, forRichness) %>%
+  group_by(Site_ID, Species) %>%
+  mutate(abundance = sum(forRichness)) %>%
+  select(-forRichness) %>%
+  distinct(.)
 
 # filter to include only sites sampled in Ramesh et al.
 pointcount_data <- merge(pointcount_data, sites, by.x = "Site_ID", by.y = "Site.code")
