@@ -6,54 +6,71 @@ output: html_notebook
 #Loading packages
 
 ```{r}
-library (tidyverse)
-library (vegan)
+library(tidyverse)
+library(vegan)
 
 ```
 
 #Getting the common name for all 120 species, with habitat (rainforest/open-country) and habit (canopy, mid-storey, ground, understorey, aquatic, aerial)
 ```{r}
-species_names <- read.csv("C:/Users/Priyanka H/OneDrive - University of Florida/Chapter 1/pointcount-acoustics/data/species-trait-dat.csv") %>%
+species_names <- read.csv("data/species-trait-dat.csv") %>%
   rename ("Species" = common_name)
 ```
 
 #Preparing point-count data, with abundance data (0 to n) for 69 sites arosss visits, to use for an NMDS plot. Wide data.
 ```{r}
-pointcount_data <- read.csv ("C:/Users/Priyanka H/OneDrive - University of Florida/Chapter 1/pointcount-acoustics/data/filt_data.csv") %>%
-  select (Site_ID, Site_type, Species, Number) %>%
+# load list of sites
+sites <- read.csv("data/list-of-sites-acoustic-study.csv") %>%
+  filter(Site.code != "OLCAP5B")
+
+# read point count data
+pointcount_data <- read.csv("data/filt_data.csv") %>%
+  select (Site_ID, Site_type, Species, Date,Number) %>%
   mutate (Site_ID = str_replace_all (Site_ID, "_", "")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Restored", "AR")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Unrestored", "NR")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Benchmark", "BM")) %>%
   rename ("Treatment" = Site_type) %>%
-  add_column (Method = "pc") %>%
-  group_by (Species, Site_ID, Treatment, Method) %>% 
+  add_column (Method = "pc") 
+
+# filter to include only sites sampled in Ramesh et al.
+pointcount_data <- merge(pointcount_data, sites, by.x = "Site_ID", by.y = "Site.code")
+pointcount_data <- pointcount_data[,1:5]
+
+
+
+%>% 
   summarise (Number=sum(Number)) %>% 
   arrange(Treatment) #%>%
   #pivot_wider (names_from = Species, values_from = Number, values_fill = list(Number=0))
+
+
 ```
 
 #Preparing annotated acoustic data, with detection data (from 0 to n) for 43 sites, to use for an NMDS plot. Wide data.
 ```{r}
-acoustic_data <- read.csv ("C:/Users/Priyanka H/OneDrive - University of Florida/Coursework/Multivariate Stats/Data/vocal-detections-data.csv") %>%
-  select (Date, Site, Restoration.type, 7:128) %>%
+acoustic_data <- read.csv ("data/vocal-detections-data.csv") %>%
+  group_by(Site, Restoration.type, Date) %>%
+  transform() %>% replace(is.na(.), 0) %>%
+  summarise_at(.vars = vars(c("IP":"HSWP")),.funs = sum) %>%
   pivot_longer(cols=IP:HSWP, names_to = "Species", values_to = "vocalDetections") %>%
   rename ("Site_ID" = Site, "Site_type" = Restoration.type, "species_annotation_codes" = Species) %>%
   replace(is.na(.), 0) %>%
   left_join(species_names) %>%
-  select (-7, -4) %>%
   mutate (Site_type = str_replace_all (Site_type, "Active", "AR")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Passive", "NR")) %>%
   mutate (Site_type = str_replace_all (Site_type, "Benchmark", "BM")) %>%
   rename ("Treatment" = Site_type, "Number" = vocalDetections) %>%
   add_column (Method = "ac") %>%
-  group_by (Species, Site_ID, Treatment, Method) %>% 
-  summarise (Number=sum(Number)) %>% 
-  arrange(Treatment) #%>%
-  #pivot_wider (names_from = Species, values_from = vocalDetections, values_fill = list(vocalDetections=0))
+  mutate(forRichness = case_when(Number>0 ~ 1,Number==0 ~ 0)) %>%
+  select(Site_ID, Species, forRichness) %>%
+  group_by(Site_ID, Species) %>%
+  mutate(abundance = sum(forRichness)) %>%
+  select(-forRichness) %>%
+  distinct(.)
 ```
 
-#Adding the two dataframes together, with 0s in the point count data for absent species
+# Adding the two dataframes together, with 0s in the point count data for absent species
 ```{r}
 
 ```
