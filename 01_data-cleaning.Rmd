@@ -1,17 +1,81 @@
 ---
-title: "R Notebook"
-output: html_notebook
+editor_options: 
+  chunk_output_type: console
 ---
 
-#Loading packages
-
+## Install required libraries
 ```{r}
 library(tidyverse)
+library(dplyr)
+library(stringr)
 library(vegan)
+library(ggplot2)
+library(scico)
+library(data.table)
+library(ggpubr)
 
+# Source any custom/other internal functions necessary for analysis
+source("code/01_internal-functions.R")
 ```
 
-#Getting the common name for all 120 species, with habitat (rainforest/open-country) and habit (canopy, mid-storey, ground, understorey, aquatic, aerial)
+## Loading point count data and acoustic data
+```{r}
+# This is data from Hariharan and Raman (2021), which consists of point counts carried out across 69 sites
+pointCounts <- read.csv("data/point-count-data.csv")
+
+# load list of sites
+sites <- read.csv("data/list-of-sites-acoustic-study.csv") %>%
+  filter(Site.code != "OLCAP5B")
+
+# load vocal detections from Ramesh et al. (submitted), which consists of detections from 43 sites (a subset of the sites sampled by Hariharan and Raman 2021)
+vocalData <- read.csv("data/vocal-detections-data.csv")
+
+# load species trait data
+trait <- read.csv("data/species-trait-dat.csv")
+```
+
+
+###
+
+1. get abundance
+2. merge for approx. list of sites in VR
+3. calculate prop. of detections for x number of visits
+
+
+## Obtain detections from point count dataset
+```{r}
+# 1. filter to include only bird data 
+# 2. combine with trait data
+# 3. Remove '_' in Site_ID
+
+pointCounts <- pointCounts %>% 
+  filter (BirdMamm == "Bird") %>% 
+  left_join(trait, by = c("Species"="common_name"))%>%
+  mutate(Site_ID = str_replace_all(Site_ID, "_", ""))
+
+# filter to include only sites sampled in Ramesh et al.
+pointCounts <- merge(pointCounts, sites, by.x = "Site_ID", by.y="Site.code")
+
+# add an abundance column across treatment types
+abundTreatment <- pointCounts %>%
+  group_by(Site_ID) %>%
+  summarise(detections = n())
+
+# add an abundance column, grouping by species
+abundSpecies <- pointCounts %>%
+  group_by(Species) %>%
+  summarise(abundance=sum(Number))
+
+# add species trait data to the above dataframe
+abundSpecies <- merge(abundSpecies, trait, by.x = "Species", by.y = "common_name")
+```
+
+
+
+
+
+
+# getting the common name for all 120 species, with habitat (rainforest/open-country) and habit (canopy, mid-storey, ground, understorey, aquatic, aerial)
 ```{r}
 species_names <- read.csv("data/species-trait-dat.csv") %>%
   rename ("Species" = common_name)
