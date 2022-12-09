@@ -73,7 +73,8 @@ acoustic_data <- read.csv ("data/vocal-detections-data.csv") %>%
   group_by(Site_ID, Species) %>%
   mutate(abundance = sum(forRichness)) %>%
   select(-forRichness) %>%
-  distinct(.)
+  distinct(.) %>%
+  filter (abundance > 0)
 ```
 
 # Adding the two dataframes together, with 0s in the point count data for absent species
